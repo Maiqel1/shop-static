@@ -1,21 +1,24 @@
-import React, { useContext } from 'react'
-import { ShopContext } from '../../context/ShopContext'
+import React, { useContext } from 'react';
+import { ShopContext } from '../../context/ShopContext';
+import { ShoppingCart } from 'phosphor-react';
 
-function Product({data}) {
+function Product({ data }) {
+  const { addToCart, cartItems } = useContext(ShopContext);
+  const cartItemAmount = cartItems[data.id];
 
-  const {addToCart, cartItems} = useContext(ShopContext)
-  const cartItemAmount = cartItems[data.id]
-  // console.log(cartItemAmount);
   return (
-    <div className='product'>
-        <img src={data.productImage} alt="" />
-        <div className="description">
-            <p><b>{data.productName}</b></p>
-            <p>${data.price}</p>
+    <div className=''>
+      <img src={data.productImage} alt="" className='img-fluid' />
+      <div>
+        <p><b>{data.productName}</b></p>
+        <p>${data.price}</p>
+        <div className='addToCartDiv text-white d-flex justify-content-center' onClick={() => addToCart(data.id)}>
+          <ShoppingCart size={18} />
+          Add to cart {cartItemAmount > 0 && <>({cartItemAmount})</>}
         </div>
-        <button onClick={() => addToCart(data.id)} className="addToCartBttn">Add to cart {cartItemAmount > 0 && <>({cartItemAmount})</>}</button>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Product
+export default Product;
