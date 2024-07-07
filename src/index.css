@@ -172,6 +172,11 @@
   justify-content: center;
 }
 
+.paymentOption {
+  border: 0.8px solid black;
+  height: 50px;
+}
+
 @media (max-width: 768px) {
   .cartHeader {
     grid-template-columns: 2fr 1fr 1fr;

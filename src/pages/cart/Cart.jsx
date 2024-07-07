@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { PRODUCTS } from '../../products';
 import { ShopContext } from '../../context/ShopContext';
 import CartItem from './CartItem';
-import './cart.css';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Products from '../shop/Products';
 import Newsletter from '../../components/Newsletter';
 import Footer from '../../components/Footer';
@@ -46,9 +46,11 @@ function Cart() {
             <div className='p-3 bg-dark'>APPLY</div>
           </form>
           <h4>TOTAL</h4>
-          <div className="col-12">
-            PROCEED TO CHECKOUT
-          </div>
+          <Link to="/checkout">
+            <button className="col-12 btn-lg btn-block">
+              PROCEED TO CHECKOUT
+            </button>
+          </Link>
         </div>) : (
         <h2>Your cart is empty</h2>
       )}
