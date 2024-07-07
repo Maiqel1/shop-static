@@ -37,7 +37,7 @@ function Navbar() {
                 <a className="nav-link" href="#">NGN</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link"><Link to={"/cart"}><ShoppingCart size={18} /></Link></a>
+                <Link to={"/cart"} className="nav-link"><ShoppingCart size={18} /></Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#user"><User size={18} /></a>

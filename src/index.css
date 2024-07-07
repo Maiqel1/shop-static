@@ -165,6 +165,20 @@
   margin-right: 10px;
 }
 
+.apply {
+  background-color: #333333;
+  color: white;
+}
+
+.checkoutBtn {
+  background: #377e7f;
+  color: white;
+  text-decoration: none !important;
+}
+.checkoutBtnL {
+  text-decoration: none !important;
+}
+
 .countHandler {
   display: flex;
   align-items: center;
@@ -196,6 +210,11 @@
 .paymentOption {
   border: 0.8px solid black;
   height: 50px;
+}
+
+.payNow {
+  background: #377e7f;
+  color: white;
 }
 
 @media (max-width: 768px) {

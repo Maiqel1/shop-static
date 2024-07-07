@@ -96,7 +96,7 @@ function Checkout() {
                         <input type="radio" className="" checked />
                         <h5 className='ms-3'>Crypto Payment</h5>
                     </div>
-                    <button className='btn-block btn-lg btn-success col-12 col-md-9 text-white mb-5'>Pay Now</button>
+                    <button className='btn-block btn-lg col-12 col-md-9 text-white mb-5 payNow'>Pay Now</button>
                 </div>
             </div>
             <Newsletter />

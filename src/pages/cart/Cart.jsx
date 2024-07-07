@@ -15,7 +15,7 @@ function Cart() {
 
   return (
     <div className='cart row'>
-      <div className="col-12 col-md-8">
+      <div className="col-12 col-lg-8">
         <div className="cartHeader">
           <div className="headerItem">PRODUCT</div>
           <div className="headerItem">PRICE</div>
@@ -32,7 +32,7 @@ function Cart() {
         <div className="total"></div>
       </div>
       {totalAmount > 0 ? (
-        <div className="col-12 col-md-4 ">
+        <div className="col-8 col-sm-8 col-md-6 col-lg-4 ">
           <h4>CART TOTALS</h4>
           <div className='d-flex justify-content-between'>
             <h4>SUBTOTAL</h4>
@@ -43,12 +43,12 @@ function Cart() {
           <p>SHIPPING TO KAFACHAN</p>
           <form className='d-flex'>
             <input type="text" className='col-8' placeholder='COUPON CODE' />
-            <div className='p-3 bg-dark'>APPLY</div>
+            <div className='p-3 ms-2 apply'>APPLY</div>
           </form>
           <h4>TOTAL</h4>
-          <Link to="/checkout">
-            <button className="col-12 btn-lg btn-block">
-              PROCEED TO CHECKOUT
+          <Link to="/checkout" className='checkoutBtnL'>
+            <button className="checkoutBtn col-12 btn-lg btn-block">
+              Proceed to Checkout
             </button>
           </Link>
         </div>) : (
