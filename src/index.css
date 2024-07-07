@@ -17,7 +17,7 @@
 }
 
 .hero-text p {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .heroDiv {
@@ -28,6 +28,14 @@
 
 .hero-text span {
   color: #377e7f;
+}
+.heroLg {
+  background-image: url("/src/assets/images/img8.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 100%;
 }
 
 .products {
@@ -49,6 +57,19 @@
   height: 500px;
 }
 
+.completeOutfitsSection section {
+  margin-top: 200px;
+}
+.completeOutfitsSection section p {
+  color: #f2f2f2;
+  font-size: 36px;
+}
+
+.completeOutfitsSection section div {
+  color: rgba(55, 126, 127, 1);
+  padding: 16px 48px 16px 48px;
+}
+
 .newsletterDiv {
   background-color: rgba(216, 239, 236, 1);
 }
@@ -67,7 +88,7 @@
   color: white;
   padding: 8px 16px 8px 16px;
   gap: 12px;
-  font-size: 10px;
+  font-size: 12px;
   outline: none !important;
 }
 
@@ -184,5 +205,35 @@
 
   .cartItem {
     grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .newsletterDiv h4 {
+    font-size: 28px;
+  }
+
+  .newsletterDiv p {
+    font-size: 16px;
+    color: rgba(130, 130, 130, 1);
+  }
+
+  .newsBtn {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .newsletterDiv h4 {
+    font-size: 28px;
+  }
+
+  .newsletterDiv p {
+    font-size: 16px;
+    color: rgba(130, 130, 130, 1);
+  }
+
+  .newsBtn {
+    font-size: 16px;
   }
 }

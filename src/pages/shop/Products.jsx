@@ -12,7 +12,7 @@ function Products({ text }) {
         <h4>{text[0]}</h4>
         <p className={location === '/cart' && 'd-none'}>View More</p>
       </div>
-      <div className='d-flex flex-column flex-md-row align-items-center justify-content-center flex-wrap'>
+      <div className='d-flex flex-column flex-md-row align-items-center justify-content-center'>
         {PRODUCTS.map((product) => (
           <div key={product.id} className='d-flex flex-column align-items-center flex-fill p-2'>
             <Product data={product} />

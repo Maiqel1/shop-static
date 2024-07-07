@@ -9,7 +9,7 @@ function Footer() {
         <div className='p-5 footer'>
             <div className='row mx-auto text-center text-md-start'>
                 <div className='col-12 col-md-4 col-lg-4 mb-3 mb-md-0'>
-                    <ul>
+                    <ul className='d-flex d-flex flex-column align-items-center justify-content-center'>
                         <div className="bg-white footer-logo"><img src={footerLogo} alt="" /></div>
                         <div className='d-flex mt-3'>
                             <div className=""><img src={instagram} alt="" /></div>
