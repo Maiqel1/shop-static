@@ -122,34 +122,12 @@
   height: 87px;
 }
 
-.cartHeader {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  font-weight: bold;
-  margin-bottom: 10px;
-  padding: 10px 0;
-  border-bottom: 2px solid #ddd;
-  text-align: left;
-}
-
-.headerItem {
-  padding: 0 10px;
+.cartDiv {
+  border-top: 2px solid #bdbdbd;
 }
 
 .cartItem {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-}
-
-.cartProduct {
-  display: flex;
-  align-items: center;
-  position: relative;
-  text-align: left;
+  border-bottom: 2px solid #bdbdbd;
 }
 
 .cartProduct p {
@@ -160,14 +138,49 @@
   font-size: 16px;
 }
 
-.cartImg {
-  width: 50px;
-  margin-right: 10px;
+.cartTotal h4 {
+  font-size: 16px;
+  color: #4f4f4f;
+  font-weight: 700;
 }
-
 .apply {
   background-color: #333333;
   color: white;
+}
+
+.checkoutItems {
+  font-weight: 500;
+}
+
+.checkoutDiv1 p:nth-child(1) {
+  font-weight: 700;
+  color: #4f4f4f;
+}
+.checkoutDiv1 p:nth-child(2) {
+  font-weight: 500;
+  color: #bdbdbd;
+}
+.checkoutDiv2 p:nth-child(1) {
+  font-weight: 700;
+  font-size: 18px;
+  color: #4f4f4f;
+}
+.checkoutDiv2 p:nth-child(2) {
+  font-weight: 500;
+  font-size: 16px;
+
+  color: #4f4f4f;
+}
+.checkoutDiv3 p:nth-child(1) {
+  font-weight: 700;
+  font-size: 24px;
+  color: #4f4f4f;
+}
+.checkoutDiv3 p:nth-child(2) {
+  font-weight: 700;
+  font-size: 24px;
+
+  color: #4f4f4f;
 }
 
 .checkoutBtn {
@@ -177,34 +190,6 @@
 }
 .checkoutBtnL {
   text-decoration: none !important;
-}
-
-.countHandler {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.countHandler input {
-  width: 40px;
-  text-align: center;
-  margin: 0 5px;
-}
-
-.removeItemBtn {
-  background: none;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  position: absolute;
-  top: 20;
-  left: -10;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .paymentOption {
@@ -217,14 +202,23 @@
   color: white;
 }
 
-@media (max-width: 768px) {
-  .cartHeader {
-    grid-template-columns: 2fr 1fr 1fr;
-  }
+.radio-input {
+  display: none;
+}
 
-  .cartItem {
-    grid-template-columns: 2fr 1fr 1fr;
-  }
+.radio-input + label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.radio-input:checked + label::before {
+  background-color: #000;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

@@ -1,26 +1,34 @@
-import React, { useContext } from 'react';
-import { ShopContext } from '../../context/ShopContext';
+// import React from 'react'
+// import './cart.css'
+// import { ShopContext } from '../../context/ShopContext'
+// import { useContext } from 'react'
 
-function CartItem({ data }) {
-  const { addToCart, removeFromCart, cartItems, updateCartItemCount, removeCartItem } = useContext(ShopContext);
-  const itemSubtotal = (data.price * cartItems[data.id]).toFixed(2);
+// function CartItem({ data }) {
+//   const { addToCart, removeFromCart, cartItems, updateCartItemCount } = useContext(ShopContext)
 
-  return (
-    <div className='cartItem'>
-      <div className="cartProduct position-relative">
-        <button className="removeItemBtn" onClick={() => removeCartItem(data.id)}>x</button>
-        <img className="cartImg" src={data.productImage} alt={data.productName} />
-        <p className=''>{data.productName}</p>
-      </div>
-      <p className='productPrice'>N{data.price}</p>
-      <div className='countHandler'>
-        <button onClick={() => removeFromCart(data.id)}>-</button>
-        <input value={cartItems[data.id]} onChange={(e) => updateCartItemCount(+e.target.value, data.id)} />
-        <button onClick={() => addToCart(data.id)}>+</button>
-      </div>
-      <p className='d-none d-md-block'>N{itemSubtotal}</p>
-    </div>
-  );
-}
+//   return (
+//     <div className='cartItem d-flex justify-content-between'>
+//       <div className="">
+//         <p>PRODUCT</p>
+//         <div className="d-flex"  >
+//           <img className="cartImg" src={data.productImage} />
+//           <p className="      ">{data.productName}</p>
+//         </div>
+//       </div>
+//       <div>
+//         <p>PRCE</p>
+//         <p>${data.price}</p>
+//       </div>
+//       <div>
+//         <p>Quantty</p>
+//         <div className='countHandler'>
+//           <button onClick={() => removeFromCart(data.id)}> -</button>
+//           <input className='col-2' value={cartItems[data.id]} onChange={(e) => updateCartItemCount(+e.target.value, data.id)} />
+//           <button onClick={() => addToCart(data.id)}> +</button>
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
 
-export default CartItem;
+// export default CartItem

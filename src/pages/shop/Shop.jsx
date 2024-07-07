@@ -17,9 +17,6 @@ function Shop() {
       <CompleteOutfits />
       <Newsletter />
       <Footer />
-
-
-
     </div>
   )
 }

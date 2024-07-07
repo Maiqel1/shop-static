@@ -1,14 +1,10 @@
-import React, { useContext } from 'react';
-import { PRODUCTS } from '../../products';
-import { ShopContext } from '../../context/ShopContext';
-import CheckoutItem from './CheckoutItem';
+import React from 'react';
 import Newsletter from '../../components/Newsletter';
 import Footer from '../../components/Footer';
+import product1 from "../../../src/assets/images/img2.png";
+
 
 function Checkout() {
-    const { cartItems, getTotalCartAmount } = useContext(ShopContext);
-    const totalAmount = getTotalCartAmount();
-
     return (
         <div className="container checkout">
             <div className="row">
@@ -16,25 +12,37 @@ function Checkout() {
                 <div className="col-12 d-block d-md-none mb-4">
                     <h4>CART</h4>
                     <div className="checkoutItems">
-                        {PRODUCTS.map((product) => {
-                            if (cartItems[product.id] > 0) {
-                                return <CheckoutItem key={product.id} data={product} />;
-                            }
-                        })}
-                        <div className="d-flex justify-content-between">
-                            <p>Subtotal</p>
-                            <p>N{totalAmount}</p>
+                        <div>
+                            <div className="d-flex justify-content-between flex-nowrap">
+                                <div className="d-flex my-2">
+                                    <img className="cartImg" src={product1} alt="Product" />
+                                    <div className='checkoutDiv1 d-flex flex-column ms-2'>
+                                        <p className="mb-1 col-9 ">Levi's - Slim Fit -  Denim - Dark Indigo</p>
+                                        <p className='col-9'>XXL</p>
+                                    </div>
+                                </div>
+                                <p className="mb-0 text-nowrap" style={{ fontWeight: '500', fontSize: '16px' }}>N35, 000</p>
+                            </div>
+
                         </div>
-                        <div className="d-flex justify-content-between">
+                        <div className=" mt-3 checkoutDiv2 d-flex justify-content-between">
+                            <p>Subtotal</p>
+                            <p>N35,000</p>
+                        </div>
+                        <div className=" checkoutDiv2 d-flex justify-content-between">
                             <p>Shipping</p>
-                            <p>N5000</p>
+                            <p>N5,000</p>
+                        </div>
+                        <div className=" checkoutDiv3 d-flex justify-content-between">
+                            <p>Total</p>
+                            <p>N5,000</p>
                         </div>
                     </div>
                 </div>
 
                 <div className="col-12 col-md-6">
                     <form>
-                        <h4>DELVERY DETALS</h4>
+                        <h4>DELIVERY DETAILS</h4>
                         <div className="mb-3">
                             <input type="email" className="form-control" placeholder="Email or phone number" />
                         </div>
@@ -67,37 +75,49 @@ function Checkout() {
                 <div className="col-12 col-md-6 d-none d-md-block">
                     <h4>CART</h4>
                     <div className="checkoutItems">
-                        {PRODUCTS.map((product) => {
-                            if (cartItems[product.id] > 0) {
-                                return <CheckoutItem key={product.id} data={product} />;
-                            }
-                        })}
-                        <div className="d-flex justify-content-between">
-                            <p>Subtotal</p>
-                            <p>N{totalAmount}</p>
+                        <div>
+                            <div className="d-flex justify-content-between">
+                                <div className="d-flex  my-2">
+                                    <img className="cartImg" src={product1} />
+                                    <div className='checkoutDiv1 d-flex flex-column pt-2'>
+                                        <p className=''>Levi's - Slim Fit Denim - Dark Indigo</p>
+                                        <p className='' style={{ marginTop: '-20px' }}>XXL</p>
+                                    </div>
+                                </div>
+                                <p className='pt-3 ' style={{ fontWeight: '500', fontSize: '16px' }}> N35,000</p>
+                            </div>
                         </div>
-                        <div className="d-flex justify-content-between">
+                        <div className="checkoutDiv2 d-flex justify-content-between">
+                            <p>Subtotal</p>
+                            <p>N35,000</p>
+                        </div>
+                        <div className="checkoutDiv2 d-flex justify-content-between">
                             <p>Shipping</p>
                             <p>N5000</p>
+                        </div>
+                        <div className="checkoutDiv3 d-flex justify-content-between">
+                            <p>Total</p>
+                            <p>N5,000</p>
                         </div>
                     </div>
                 </div>
                 <div className='col-12 col-md-9 mt-3 '>
                     <h4>PAYMENT</h4>
-                    <div className='border border-black px-4 py-3 col-12 col-md-9 d-flex'>
-                        <input type="radio" className="" checked />
-                        <h5 className='ms-3'>Card Payment</h5>
+                    <div className='border border-black px-4 py-3 col-12 col-md-9 d-flex align-items-center'>
+                        <input type="radio" id="card" checked className="radio-input" />
+                        <label htmlFor="card" className='ms-3 mb-0'>Card Payment</label>
                     </div>
-                    <div className='border border-black px-4 py-3 col-12 col-md-9 d-flex'>
-                        <input type="radio" className="" checked />
-                        <h5 className='ms-3'>Bank Transfer</h5>
+                    <div className='border border-black px-4 py-3 col-12 col-md-9 d-flex align-items-center'>
+                        <input type="radio" id="bank" checked className="radio-input" />
+                        <label htmlFor="bank" className='ms-3 mb-0'>Bank Transfer</label>
                     </div>
-                    <div className='border border-black px-4 py-3 col-12 col-md-9 d-flex'>
-                        <input type="radio" className="" checked />
-                        <h5 className='ms-3'>Crypto Payment</h5>
+                    <div className='border border-black px-4 py-3 col-12 col-md-9 d-flex align-items-center'>
+                        <input type="radio" id="crypto" checked className="radio-input" />
+                        <label htmlFor="crypto" className='ms-3 mb-0'>Crypto Payment</label>
                     </div>
                     <button className='btn-block btn-lg col-12 col-md-9 text-white mb-5 payNow'>Pay Now</button>
                 </div>
+
             </div>
             <Newsletter />
             <Footer />
