@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import product1 from "../../../src/assets/images/img2.png";
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -7,6 +7,7 @@ import Newsletter from '../../components/Newsletter';
 import Footer from '../../components/Footer';
 
 function Cart() {
+  // eslint-disable-next-line
   let navigate = useNavigate();
 
   return (
@@ -24,7 +25,7 @@ function Cart() {
           <div className="col-6">
             <div className="d-flex" >
               <p className='mt-3 pe-1'>X</p>
-              <img className="cartImg" src={product1} />
+              <img className="cartImg" src={product1} alt='' />
               <p>Levi's - Slim Fit - Denim - Dark Indigo</p>
             </div>
           </div>
@@ -39,7 +40,7 @@ function Cart() {
           </div>
         </div>
       </div>
-      <div className="cartTotal col-8 col-sm-8 col-md-6 col-lg-4 mt-3 mt-sm-0">
+      <div className="cartTotal col-8 col-sm-8 col-md-6 col-lg-4 mt-5 mt-sm-0">
         <h4>CART TOTALS</h4>
         <div className='d-flex justify-content-between my-3'>
           <h4>SUBTOTAL</h4>

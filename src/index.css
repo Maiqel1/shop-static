@@ -163,6 +163,31 @@
   color: rgba(130, 130, 130, 1);
 }
 
+.emailInput,
+.input-group-text {
+  background-color: transparent !important;
+  border: 1px solid #ced4da;
+}
+
+.emailInput:focus {
+  box-shadow: none;
+}
+
+.input-group-text {
+  border-right: 0;
+}
+
+.emailInput {
+  border-left: 0;
+}
+
+/* Placeholder styling */
+.emailInput::placeholder {
+  color: #6c757d;
+  opacity: 1;
+  font-size: 12px;
+}
+
 .newsBtn {
   background: rgba(55, 126, 127, 1);
   color: white;
@@ -318,6 +343,12 @@
   .newsBtn {
     font-size: 16px;
   }
+
+  .emailInput::placeholder {
+    color: #6c757d;
+    opacity: 1;
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -332,5 +363,11 @@
 
   .newsBtn {
     font-size: 16px;
+  }
+
+  .emailInput::placeholder {
+    color: #6c757d;
+    opacity: 1;
+    font-size: 14px;
   }
 }
