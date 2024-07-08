@@ -36,7 +36,7 @@ function Navbar() {
               <li className="nav-item">
                 <a className="nav-link" href="#">NGN</a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item ">
                 <Link to={"/cart"} className="nav-link"><ShoppingCart size={18} /></Link>
               </li>
               <li className="nav-item">
@@ -46,7 +46,7 @@ function Navbar() {
           </div>
           <div className="d-lg-none d-flex ms-auto">
             <a className="nav-link" href="#">NGN</a>
-            <a className="nav-link mx-3"><Link to={"/cart"}><ShoppingCart size={18} /></Link></a>
+            <a className="nav-link mx-3"><Link to={"/cart"} className='cartLink'><ShoppingCart size={18} /></Link></a>
           </div>
         </div>
       </nav>
