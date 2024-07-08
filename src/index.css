@@ -197,6 +197,10 @@
   width: fit-content;
 }
 
+.footerBottom {
+  border-top: 1px solid #e7ddff;
+}
+
 /* Cart */
 .cartImg {
   height: 87px;

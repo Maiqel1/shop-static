@@ -2,6 +2,10 @@ import React from 'react';
 import footerLogo from '../assets/images/logo-footer.png';
 import instagram from '../assets/images/instagram.png';
 import twitter from '../assets/images/twitter.png';
+import mastercard from '../assets/images/img11.png';
+import visa from '../assets/images/img12.png';
+import discover from '../assets/images/img14.png';
+import applePay from '../assets/images/img13.png';
 
 function Footer() {
     return (
@@ -50,6 +54,15 @@ function Footer() {
                         <li><p>Email</p></li>
                         <li><p>Phone Number</p></li>
                     </ul>
+                </div>
+            </div>
+            <div className='footerBottom pt-4 mt-4 d-flex flex-column flex-md-row justify-content-md-between justify-content-between'>
+                <p>© ClothedByJoe, All Rights Reserved</p>
+                <div className='d-flex me-0 me-md-5 justify-content-center'>
+                    <img className='mx-2' src={mastercard} alt="" />
+                    <img className='mx-2' src={discover} alt="" />
+                    <img className='mx-2' src={visa} alt="" />
+                    <img className='mx-2' src={applePay} alt="" />
                 </div>
             </div>
         </div>
