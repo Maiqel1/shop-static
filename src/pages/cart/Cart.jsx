@@ -17,7 +17,7 @@ function Cart() {
           <div className='col-12 d-flex justify-content-between'>
             <div className="col-6"><p>PRODUCT</p></div>
             <div className="col-2"><p>PRICE</p></div>
-            <div className="col-2 me-4"><p>QUANTITY</p></div>
+            <div className="col-2 me-4 me-sm-0"><p>QUANTITY</p></div>
             <div className="col-2 d-none d-sm-none d-md-block d-lg-block"><p>SUBTOTAL</p></div>
           </div>
         </div>
@@ -32,7 +32,7 @@ function Cart() {
           <div className="col-2">
             <p>N35,000</p>
           </div>
-          <div className="col-2 me-4">
+          <div className="col-2 me-4 me-sm-0">
             <p className='ps-4'>1</p>
           </div>
           <div className="col-2 d-none d-sm-none d-md-block d-lg-block">
