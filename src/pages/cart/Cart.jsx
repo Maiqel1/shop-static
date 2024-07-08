@@ -26,17 +26,17 @@ function Cart() {
             <div className="d-flex" >
               <p className='mt-3 pe-1'>X</p>
               <img className="cartImg" src={product1} alt='' />
-              <p>Levi's - Slim Fit - Denim - Dark Indigo</p>
+              <p className='mt-0 mt-sm-1'>Levi's - Slim Fit - Denim - Dark Indigo</p>
             </div>
           </div>
           <div className="col-2">
-            <p>N35,000</p>
+            <p className='mt-4'>N35,000</p>
           </div>
           <div className="col-2 me-4 me-sm-0">
-            <p className='ps-4'>1</p>
+            <p className='ps-4 mt-4'>1</p>
           </div>
           <div className="col-2 d-none d-sm-none d-md-block d-lg-block">
-            <p>N35,000</p>
+            <p className='mt-4'>N35,000</p>
           </div>
         </div>
       </div>
