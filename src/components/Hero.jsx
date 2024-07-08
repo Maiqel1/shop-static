@@ -11,8 +11,8 @@ function Hero() {
             <h2 className='col-12 col-sm-10'>Style Meets <span >Convenience,</span> Shop Seamlessly.</h2>
             <p className='col-12 col-sm-10'>Step into style with our curated collection of trendsetting sneakers and fashion-forward clothing.</p>
             <div className='d-flex col-12 col-sm-10'>
-              <div className='heroDiv p-3 text-white'>Shop men</div>
-              <div className='heroDiv text-white p-3 mx-3'>Shop Women</div>
+              <button className='heroDiv p-3 text-white'>Shop men</button>
+              <button className='heroDiv text-white p-3 mx-3'>Shop Women</button>
             </div>
           </div>
           <div className='col-12 col-sm-6 mt-4'>
@@ -27,8 +27,8 @@ function Hero() {
           <h2 className='mt-5 pt-5'>Style Meets <span >Convenience</span>,<br /> Shop Seamlessly.</h2>
           <p>Step into style with our curated collection of trendsetting sneakers and fashion-forward clothing.</p>
           <div className='d-flex '>
-            <div className='heroDiv p-3 text-white'>Shop men</div>
-            <div className='heroDiv text-white p-3 mx-3'>Shop Women</div>
+            <button className='heroDiv p-3 text-white'>Shop men</button>
+            <button className='heroDiv text-white p-3 mx-3'>Shop Women</button>
           </div>
         </div>
       </div>

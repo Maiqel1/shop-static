@@ -51,7 +51,7 @@ function Cart() {
         <p style={{ fontSize: "14px" }}>SHIPPING TO <b>KAFACHAN</b></p>
         <form className='d-flex'>
           <input type="text" className='col-8' placeholder='COUPON CODE' />
-          <div className='p-3 ms-2 apply'>APPLY</div>
+          <button onClick={(e) => e.preventDefault()} className='p-3 ms-2 apply'>APPLY</button>
         </form>
         <h4 className='my-3'>TOTAL</h4>
         <Link to="/checkout" className='checkoutBtnL'>

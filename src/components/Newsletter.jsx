@@ -20,7 +20,7 @@ function Newsletter() {
             placeholder="Enter your email"
             aria-label="Email"
           />
-          <div className='newsBtn'>Subscribe</div>
+          <button className='newsBtn' onClick={(e) => e.preventDefault()}>Subscribe</button>
         </div>
       </form>
       <p className='pt-3'>You’ll be able to unsubscribe at any time.

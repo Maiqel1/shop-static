@@ -6,7 +6,7 @@ import logo from '../assets/images/logo.png'
 function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-[#FFFFFF]">
+      <nav className="navbar navbar-expand-lg navbar-light bg-[#FFFFFF] mb-4">
         <div className="container">
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -46,7 +46,7 @@ function Navbar() {
           </div>
           <div className="d-lg-none d-flex ms-auto">
             <a className="nav-link" href="#">NGN</a>
-            <a className="nav-link mx-3"><Link to={"/cart"} className='cartLink'><ShoppingCart size={18} /></Link></a>
+            <Link to={"/cart"} className='cartLink nav-link mx-3'><ShoppingCart size={18} /></Link>
           </div>
         </div>
       </nav>

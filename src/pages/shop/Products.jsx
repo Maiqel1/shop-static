@@ -4,8 +4,14 @@ import product2 from "../../../src/assets/images/img1.png";
 import product3 from "../../../src/assets/images/img2.png";
 import product4 from "../../../src/assets/images/img3.png";
 import { ShoppingCart } from 'phosphor-react';
+import { Link } from 'react-router-dom';
+
 
 function Products({ text }) {
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   let location = window.location.pathname;
 
@@ -14,51 +20,59 @@ function Products({ text }) {
       <div className='d-flex my-4 pt-3 mx-4 justify-content-between'>
         <h4 className=''>{text[0]}</h4>
         <p className={location === '/cart' ? 'd-none' : 'viewMoreP d-block d-sm-block d-md-none'}>View More</p>
-        <div className={location === '/cart' ? 'd-none' : 'viewMore p-2 d-none d-sm-none d-md-block'}>View more</div>
+        <button className={location === '/cart' ? 'd-none' : 'viewMore p-2 d-none d-sm-none d-md-block'}>View more</button>
       </div>
       <div className='d-flex flex-column flex-md-row align-items-center justify-content-center mx-auto px-5'>
         <div className=''>
-          <img src={product1} alt="" className='img-fluid' />
+          <img src={product1} alt="" className='img-fluid productImg' />
           <div>
             <p><b>Levi's - Slim Fit - Denim - Dark Indigo</b></p>
             <p>N35,000</p>
-            <div className='addToCartDiv text-white d-flex justify-content-center'>
-              <ShoppingCart size={18} />
-              Add to cart
-            </div>
+            <Link to={'/cart'} onClick={scrollToTop}>
+              <div className='addToCartDiv text-white d-flex justify-content-center'>
+                <ShoppingCart size={18} />
+                Add to cart
+              </div>
+            </Link>
           </div>
         </div>
         <div className='mx-0 mx-sm-5 my-4'>
-          <img src={product2} alt="" className='img-fluid' />
+          <img src={product2} alt="" className='img-fluid productImg' />
           <div>
             <p><b>Levi's - Slim Fit - Denim - Dark Indigo</b></p>
             <p>N35,000</p>
-            <div className='addToCartDiv text-white d-flex justify-content-center'>
-              <ShoppingCart size={18} />
-              Add to cart
-            </div>
+            <Link to={'/cart'} onClick={scrollToTop}>
+              <div className='addToCartDiv text-white d-flex justify-content-center'>
+                <ShoppingCart size={18} />
+                Add to cart
+              </div>
+            </Link>
           </div>
         </div>
         <div className=''>
-          <img src={product3} alt="" className='img-fluid' />
+          <img src={product3} alt="" className='img-fluid productImg' />
           <div>
             <p><b>Levi's - Slim Fit - Denim - Dark Indigo</b></p>
             <p>N35,000</p>
-            <div className='addToCartDiv text-white d-flex justify-content-center'>
-              <ShoppingCart size={18} />
-              Add to cart
-            </div>
+            <Link to={'/cart'} onClick={scrollToTop}>
+              <div className='addToCartDiv text-white d-flex justify-content-center'>
+                <ShoppingCart size={18} />
+                Add to cart
+              </div>
+            </Link>
           </div>
         </div>
         <div className='d-none d-sm-none d-md-none d-lg-block ms-5'>
-          <img src={product4} alt="" className='img-fluid' />
+          <img src={product4} alt="" className='img-fluid productImg' />
           <div>
             <p><b>Levi's - Slim Fit - Denim - Dark Indigo</b></p>
-            <p>N35.000</p>
-            <div className='addToCartDiv text-white d-flex justify-content-center'>
-              <ShoppingCart size={18} />
-              Add to cart
-            </div>
+            <p>N35,000</p>
+            <Link to={'/cart'} onClick={scrollToTop}>
+              <div className='addToCartDiv text-white d-flex justify-content-center'>
+                <ShoppingCart size={18} />
+                Add to cart
+              </div>
+            </Link>
           </div>
         </div>
       </div>
