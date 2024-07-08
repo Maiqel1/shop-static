@@ -32,7 +32,7 @@ function Products({ text }) {
           <img src={product2} alt="" className='img-fluid' />
           <div>
             <p><b>Levi's - Slim Fit - Denim - Dark Indigo</b></p>
-            <p>N35.000</p>
+            <p>N35,000</p>
             <div className='addToCartDiv text-white d-flex justify-content-center'>
               <ShoppingCart size={18} />
               Add to cart
@@ -43,7 +43,7 @@ function Products({ text }) {
           <img src={product3} alt="" className='img-fluid' />
           <div>
             <p><b>Levi's - Slim Fit - Denim - Dark Indigo</b></p>
-            <p>N35.000</p>
+            <p>N35,000</p>
             <div className='addToCartDiv text-white d-flex justify-content-center'>
               <ShoppingCart size={18} />
               Add to cart
