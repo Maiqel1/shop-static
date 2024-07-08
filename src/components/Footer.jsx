@@ -21,7 +21,7 @@ function Footer() {
                     </ul>
                 </div>
                 <div className='col-12 col-md-2 col-lg-2 mb-3 mb-md-0 m'>
-                    <ul className='d-flex flex-column align-items-center align-items-md-start pe-5 pe-sm-0'>
+                    <ul className='d-flex flex-column align-items-center align-items-md-start pe-4 pe-sm-0'>
                         <li><h6>ABOUT US</h6></li>
                         <li><p>Our Story</p></li>
                         <li><p>FAQs</p></li>
@@ -29,7 +29,7 @@ function Footer() {
                     </ul>
                 </div>
                 <div className='col-12 col-md-2 col-lg-2 mb-3 mb-md-0'>
-                    <ul className='d-flex flex-column align-items-center align-items-md-start pe-5 pe-sm-0'>
+                    <ul className='d-flex flex-column align-items-center align-items-md-start pe-4 pe-sm-0'>
                         <li><h6>HELP</h6></li>
                         <li><p>Get Help </p></li>
                         <li><p>Shipping</p></li>
@@ -39,7 +39,7 @@ function Footer() {
                     </ul>
                 </div>
                 <div className='col-12 col-md-2 col-lg-2 mb-3 mb-md-0'>
-                    <ul className='d-flex flex-column align-items-center align-items-md-start pe-5 pe-sm-0'>
+                    <ul className='d-flex flex-column align-items-center align-items-md-start pe-4 pe-sm-0'>
                         <li><h6>SHOP</h6></li>
                         <li><p>Shirts</p></li>
                         <li><p>Sweatshirts</p></li>
@@ -49,7 +49,7 @@ function Footer() {
                     </ul>
                 </div>
                 <div className='col-12 col-md-2 col-lg-2'>
-                    <ul className='d-flex flex-column align-items-center align-items-md-start pe-5 pe-sm-0'>
+                    <ul className='d-flex flex-column align-items-center align-items-md-start pe-4 pe-sm-0'>
                         <li><h6>CONTACT US</h6></li>
                         <li><p>Email</p></li>
                         <li><p>Phone Number</p></li>
