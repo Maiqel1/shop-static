@@ -18,7 +18,7 @@ function Cart() {
             <div className="col-6"><p>PRODUCT</p></div>
             <div className="col-2"><p>PRICE</p></div>
             <div className="col-2 me-4 me-sm-0"><p>QUANTITY</p></div>
-            <div className="col-2 d-none d-sm-none d-md-block d-lg-block"><p>SUBTOTAL</p></div>
+            <div className="col-2 d-none d-sm-none d-md-block d-lg-block "><p>SUBTOTAL</p></div>
           </div>
         </div>
         <div className='cartItem row d-flex justify-content-between'>
@@ -40,7 +40,7 @@ function Cart() {
           </div>
         </div>
       </div>
-      <div className="cartTotal col-8 col-sm-8 col-md-6 col-lg-4 mt-5 mt-sm-0">
+      <div className="cartTotal col-8 col-sm-8 col-md-6 col-lg-4 mt-5 mt-sm-5 mt-md-5 mt-lg-0">
         <h4>CART TOTALS</h4>
         <div className='d-flex justify-content-between my-3'>
           <h4>SUBTOTAL</h4>

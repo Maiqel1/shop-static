@@ -261,6 +261,18 @@
   font-weight: 500;
 }
 
+.cardPayment {
+  border-radius: 8px 8px 0px 0px;
+}
+
+.bankTransfer {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+.cryptoPayment {
+  border-radius: 0px 0px 8px 8px;
+}
+
 .checkoutDiv1 p:nth-child(1) {
   font-weight: 700;
   color: #4f4f4f;
@@ -309,6 +321,11 @@
 .payNow {
   background: #377e7f;
   color: white;
+  font-size: 1rem;
+  outline: none !important;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .radio-input {

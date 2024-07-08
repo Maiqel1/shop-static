@@ -103,19 +103,19 @@ function Checkout() {
                 </div>
                 <div className='col-12 col-md-9 mt-3 '>
                     <h4>PAYMENT</h4>
-                    <div className='border border-black px-4 py-3 col-12 col-md-9 d-flex align-items-center'>
+                    <div className='border border-black cardPayment px-4 py-3 col-12 col-md-9 mt-3 d-flex align-items-center'>
                         <input type="radio" id="card" checked className="radio-input" />
                         <label htmlFor="card" className='ms-3 mb-0'>Card Payment</label>
                     </div>
-                    <div className='border border-black px-4 py-3 col-12 col-md-9 d-flex align-items-center'>
+                    <div className='border border-black bankTransfer px-4 py-3 col-12 col-md-9 d-flex align-items-center'>
                         <input type="radio" id="bank" checked className="radio-input" />
                         <label htmlFor="bank" className='ms-3 mb-0'>Bank Transfer</label>
                     </div>
-                    <div className='border border-black px-4 py-3 col-12 col-md-9 d-flex align-items-center'>
+                    <div className='border border-black cryptoPayment px-4 py-3 col-12 col-md-9 d-flex align-items-center'>
                         <input type="radio" id="crypto" checked className="radio-input" />
                         <label htmlFor="crypto" className='ms-3 mb-0'>Crypto Payment</label>
                     </div>
-                    <button className='btn-block btn-lg col-12 col-md-9 text-white mb-5 payNow'>Pay Now</button>
+                    <button className='btn-block btn-lg col-12 col-md-9 text-white mb-5 mt-3 payNow'>Pay Now</button>
                 </div>
 
             </div>
