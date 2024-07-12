@@ -259,11 +259,15 @@ button {
 }
 
 .cartDiv {
-  border-top: 2px solid #bdbdbd;
+  /* border-top: 2px solid #bdbdbd; */
+  border-bottom: 2px solid #bdbdbd;
 }
 
 .cartItem {
-  border-bottom: 2px solid #bdbdbd;
+}
+
+.productName {
+  font-size: 10px;
 }
 
 .cartProduct p {
@@ -271,7 +275,11 @@ button {
 }
 
 .productPrice {
-  font-size: 16px;
+  font-size: 14px;
+}
+
+.productName {
+  font-size: 14px;
 }
 
 .cartTotal h4 {
@@ -347,6 +355,18 @@ button {
   text-decoration: none !important;
 }
 
+.countHandler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countHandler input {
+  width: 40px;
+  text-align: center;
+  margin: 0 5px;
+}
+
 .paymentOption {
   border: 0.8px solid black;
   height: 50px;
@@ -400,6 +420,13 @@ button {
     opacity: 1;
     font-size: 14px;
   }
+  .productPrice {
+    font-size: 16px;
+  }
+
+  .productName {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -420,5 +447,12 @@ button {
     color: #6c757d;
     opacity: 1;
     font-size: 14px;
+  }
+  .productPrice {
+    font-size: 16px;
+  }
+
+  .productName {
+    font-size: 16px;
   }
 }

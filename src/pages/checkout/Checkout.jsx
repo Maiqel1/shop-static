@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { PRODUCTS } from '../../products';
+import { ShopContext } from '../../context/ShopContext';
+import CheckoutItem from './CheckoutItem';
 import Newsletter from '../../components/Newsletter';
 import Footer from '../../components/Footer';
-import product1 from "../../../src/assets/images/img2.png";
-
 
 function Checkout() {
+
+    const { cartItems, getTotalCartAmount } = useContext(ShopContext);
+    const totalAmount = getTotalCartAmount();
+
     return (
         <div className="container checkout">
             <div className="row">
@@ -13,16 +18,11 @@ function Checkout() {
                     <h4>CART</h4>
                     <div className="checkoutItems">
                         <div>
-                            <div className="d-flex justify-content-between flex-nowrap">
-                                <div className="d-flex my-2">
-                                    <img className="cartImg" src={product1} alt="Product" />
-                                    <div className='checkoutDiv1 d-flex flex-column ms-2'>
-                                        <p className="mb-1 col-9 ">Levi's - Slim Fit -  Denim - Dark Indigo</p>
-                                        <p className='col-9'>XXL</p>
-                                    </div>
-                                </div>
-                                <p className="mb-0 text-nowrap" style={{ fontWeight: '500', fontSize: '16px' }}>N35, 000</p>
-                            </div>
+                            {PRODUCTS.map((product) => {
+                                if (cartItems[product.id] > 0) {
+                                    return <CheckoutItem key={product.id} data={product} />;
+                                }
+                            })}
 
                         </div>
                         <div className=" mt-3 checkoutDiv2 d-flex justify-content-between">
@@ -76,16 +76,11 @@ function Checkout() {
                     <h4>CART</h4>
                     <div className="checkoutItems">
                         <div>
-                            <div className="d-flex justify-content-between">
-                                <div className="d-flex  my-2">
-                                    <img className="cartImg" src={product1} />
-                                    <div className='checkoutDiv1 d-flex flex-column pt-2'>
-                                        <p className=''>Levi's - Slim Fit Denim - Dark Indigo</p>
-                                        <p className='' style={{ marginTop: '-20px' }}>XXL</p>
-                                    </div>
-                                </div>
-                                <p className='pt-3 ' style={{ fontWeight: '500', fontSize: '16px' }}> N35,000</p>
-                            </div>
+                            {PRODUCTS.map((product) => {
+                                if (cartItems[product.id] > 0) {
+                                    return <CheckoutItem key={product.id} data={product} />;
+                                }
+                            })}
                         </div>
                         <div className="checkoutDiv2 d-flex justify-content-between">
                             <p>Subtotal</p>
@@ -97,7 +92,7 @@ function Checkout() {
                         </div>
                         <div className="checkoutDiv3 d-flex justify-content-between">
                             <p>Total</p>
-                            <p>N5,000</p>
+                            <p>N{totalAmount}</p>
                         </div>
                     </div>
                 </div>

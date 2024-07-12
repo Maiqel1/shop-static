@@ -1,5 +1,7 @@
-import React from 'react';
-import product1 from "../../../src/assets/images/img2.png";
+import React, { useContext } from 'react';
+import { PRODUCTS } from '../../products';
+import { ShopContext } from '../../context/ShopContext';
+import CartItem from './CartItem';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Products from '../shop/Products';
@@ -9,42 +11,22 @@ import Footer from '../../components/Footer';
 function Cart() {
   // eslint-disable-next-line
   let navigate = useNavigate();
+  const { cartItems, getTotalCartAmount } = useContext(ShopContext);
+  const totalAmount = getTotalCartAmount();
 
   return (
     <div className='cart row mt-4' >
-      <div className="cartDiv col-12 col-lg-8">
-        <div className='row'>
-          <div className='col-12 d-flex justify-content-between'>
-            <div className="col-6"><p>PRODUCT</p></div>
-            <div className="col-2"><p>PRICE</p></div>
-            <div className="col-2 me-4 me-sm-0"><p>QUANTITY</p></div>
-            <div className="col-2 d-none d-sm-none d-md-block d-lg-block "><p>SUBTOTAL</p></div>
-          </div>
-        </div>
-        <div className='cartItem row d-flex justify-content-between'>
-          <div className="col-6">
-            <div className="d-flex" >
-              <p className='mt-3 pe-1'>X</p>
-              <img className="cartImg" src={product1} alt='' />
-              <p className='mt-0 mt-sm-1'>Levi's - Slim Fit - Denim - Dark Indigo</p>
-            </div>
-          </div>
-          <div className="col-2">
-            <p className='mt-4'>N35,000</p>
-          </div>
-          <div className="col-2 me-4 me-sm-0">
-            <p className='ps-4 mt-4'>1</p>
-          </div>
-          <div className="col-2 d-none d-sm-none d-md-block d-lg-block">
-            <p className='mt-4'>N35,000</p>
-          </div>
-        </div>
-      </div>
-      <div className="cartTotal col-8 col-sm-8 col-md-6 col-lg-4 mt-5 mt-sm-5 mt-md-5 mt-lg-0">
+      {PRODUCTS.map((product) => {
+        if (cartItems[product.id] > 0) {
+          return <CartItem key={product.id} data={product} />;
+        }
+      })}
+
+      <div className="cartTotal col-8 col-sm-8 col-md-6 col-lg-4 mt-5 mt-sm-5 mt-md-5 mt-lg-4">
         <h4>CART TOTALS</h4>
         <div className='d-flex justify-content-between my-3'>
           <h4>SUBTOTAL</h4>
-          <h4>N35,000</h4>
+          <h4>N{totalAmount}</h4>
         </div>
         <h4 className='my-3'>SHIPPING</h4>
         <h4>Shipping: <b>N35000</b></h4>
@@ -53,7 +35,10 @@ function Cart() {
           <input type="text" className='col-8' placeholder='COUPON CODE' />
           <button onClick={(e) => e.preventDefault()} className='p-3 ms-2 apply'>APPLY</button>
         </form>
-        <h4 className='my-3'>TOTAL</h4>
+        <div className='d-flex justify-content-between my-3'>
+          <h4>TOTAL</h4>
+          <h4>N{totalAmount + 35000}</h4>
+        </div>
         <Link to="/checkout" className='checkoutBtnL'>
           <button className="checkoutBtn col-12 btn-lg btn-block">
             Proceed to Checkout
