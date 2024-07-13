@@ -1,11 +1,12 @@
-import React, { useContext } from 'react';
-import { PRODUCTS } from '../../products';
+import React, { useContext, useState } from 'react';
 import { ShopContext } from '../../context/ShopContext';
 import CheckoutItem from './CheckoutItem';
 import Newsletter from '../../components/Newsletter';
 import Footer from '../../components/Footer';
+import CheckoutModal from './CheckoutModal';
 
 function Checkout() {
+    const [modalState, setModalState] = useState(false);
 
     const { cartItems, getTotalCartAmount, apiData } = useContext(ShopContext);
     const totalAmount = getTotalCartAmount();
@@ -103,17 +104,18 @@ function Checkout() {
                         <label htmlFor="card" className='ms-3 mb-0'>Card Payment</label>
                     </div>
                     <div className='border border-black bankTransfer px-4 py-3 col-12 col-md-9 d-flex align-items-center'>
-                        <input type="radio" id="bank" checked className="radio-input" />
+                        <input type="radio" id="bank" className="radio-input" />
                         <label htmlFor="bank" className='ms-3 mb-0'>Bank Transfer</label>
                     </div>
                     <div className='border border-black cryptoPayment px-4 py-3 col-12 col-md-9 d-flex align-items-center'>
-                        <input type="radio" id="crypto" checked className="radio-input" />
+                        <input type="radio" id="crypto" className="radio-input" />
                         <label htmlFor="crypto" className='ms-3 mb-0'>Crypto Payment</label>
                     </div>
-                    <button className='btn-block btn-lg col-12 col-md-9 text-white mb-5 mt-3 payNow'>Pay Now</button>
+                    <button className='btn-block btn-lg col-12 col-md-9 text-white mb-5 mt-3 payNow' onClick={() => setModalState(!modalState)}>Pay Now</button>
                 </div>
 
             </div>
+            <CheckoutModal isOpen={modalState} onClose={() => setModalState(false)} />
             <Newsletter />
             <Footer />
         </div>

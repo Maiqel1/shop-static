@@ -47,7 +47,7 @@ function ProductModal({ isOpen, onClose, product }) {
                     )}
                 </div>
                 <p>N{product.current_price[0].NGN[0]}</p>
-                <p>{product.description === 'null' ? 'There is no description for this product' : product.description}</p>
+                <p>{product.description === 'null' || '' || null ? 'There is no description for this product' : product.description}</p>
             </div>
         </div>
     );
