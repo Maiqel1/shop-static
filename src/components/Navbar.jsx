@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { ShoppingCart, MagnifyingGlass, User } from 'phosphor-react'
 import logo from '../assets/images/logo.png'
+// import { ShopContext } from '../context/ShopContext'
 
 function Navbar() {
+
+  // const { cartItems } = useContext(ShopContext);
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-[#FFFFFF] mb-4">

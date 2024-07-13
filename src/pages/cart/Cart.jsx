@@ -16,6 +16,9 @@ function Cart() {
   const { cartItems, getTotalCartAmount, clearCart, apiData } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   return (
     <div className='cart row mt-4' >
       {apiData.map((product) => {
@@ -43,7 +46,7 @@ function Cart() {
           <h4>N{totalAmount + 5000}</h4>
         </div>
         <Link to="/checkout" className='checkoutBtnL'>
-          <button className="checkoutBtn col-12 btn-lg btn-block">
+          <button className="checkoutBtn col-12 btn-lg btn-block" onClick={scrollToTop}>
             Proceed to Checkout
           </button>
         </Link>
