@@ -31,7 +31,7 @@ function CartItem({ data }) {
                         <p className='productPrice'>N{productPrice}</p>
                     </div>
                     <div className="col-2 me-4 me-sm-0">
-                        <div className='countHandler ps-5 '>
+                        <div className='countHandler ps-5 ps-sm-0 '>
                             <button onClick={() => removeFromCart(data.id)}>-</button>
                             <input value={cartItems[data.id]} onChange={(e) => updateCartItemCount(+e.target.value, data.id)} />
                             <button onClick={() => addToCart(data.id)}>+</button>

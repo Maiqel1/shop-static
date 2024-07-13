@@ -533,6 +533,10 @@ button {
     font-size: 16px;
   }
 
+  .removeItemBtn:hover {
+    cursor: pointer;
+  }
+
   .modalContent {
     background-color: #fff;
     padding: 20px;
