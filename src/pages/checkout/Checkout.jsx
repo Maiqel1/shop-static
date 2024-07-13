@@ -7,7 +7,7 @@ import Footer from '../../components/Footer';
 
 function Checkout() {
 
-    const { cartItems, getTotalCartAmount } = useContext(ShopContext);
+    const { cartItems, getTotalCartAmount, apiData } = useContext(ShopContext);
     const totalAmount = getTotalCartAmount();
 
     return (
@@ -18,7 +18,7 @@ function Checkout() {
                     <h4>CART</h4>
                     <div className="checkoutItems">
                         <div>
-                            {PRODUCTS.map((product) => {
+                            {apiData.map((product) => {
                                 if (cartItems[product.id] > 0) {
                                     return <CheckoutItem key={product.id} data={product} />;
                                 }
@@ -27,7 +27,7 @@ function Checkout() {
                         </div>
                         <div className=" mt-3 checkoutDiv2 d-flex justify-content-between">
                             <p>Subtotal</p>
-                            <p>N35,000</p>
+                            <p>N{totalAmount}</p>
                         </div>
                         <div className=" checkoutDiv2 d-flex justify-content-between">
                             <p>Shipping</p>
@@ -35,7 +35,7 @@ function Checkout() {
                         </div>
                         <div className=" checkoutDiv3 d-flex justify-content-between">
                             <p>Total</p>
-                            <p>N5,000</p>
+                            <p>N{totalAmount + 5000}</p>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@ function Checkout() {
                     <h4>CART</h4>
                     <div className="checkoutItems">
                         <div>
-                            {PRODUCTS.map((product) => {
+                            {apiData.map((product) => {
                                 if (cartItems[product.id] > 0) {
                                     return <CheckoutItem key={product.id} data={product} />;
                                 }
@@ -84,7 +84,7 @@ function Checkout() {
                         </div>
                         <div className="checkoutDiv2 d-flex justify-content-between">
                             <p>Subtotal</p>
-                            <p>N35,000</p>
+                            <p>N{totalAmount}</p>
                         </div>
                         <div className="checkoutDiv2 d-flex justify-content-between">
                             <p>Shipping</p>
@@ -92,7 +92,7 @@ function Checkout() {
                         </div>
                         <div className="checkoutDiv3 d-flex justify-content-between">
                             <p>Total</p>
-                            <p>N{totalAmount}</p>
+                            <p>N{totalAmount + 5000}</p>
                         </div>
                     </div>
                 </div>

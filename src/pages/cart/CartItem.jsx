@@ -3,7 +3,10 @@ import { ShopContext } from '../../context/ShopContext';
 
 function CartItem({ data }) {
     const { addToCart, removeFromCart, cartItems, updateCartItemCount, removeCartItem } = useContext(ShopContext);
-    const itemSubtotal = (data.price * cartItems[data.id]).toFixed(2);
+
+    const productImageUrl = data.photos.length > 0 && `https://api.timbu.cloud/images/${data.photos[0].url}`
+    const productPrice = data.current_price[0].NGN[0];
+    const itemSubtotal = (productPrice * cartItems[data.id]).toFixed(2);
 
     return (
         <div className='cartItem'>
@@ -20,12 +23,12 @@ function CartItem({ data }) {
                     <div className="col-6">
                         <div className="d-flex" >
                             <p className=" mt-3 pe-1 removeItemBtn" onClick={() => removeCartItem(data.id)}>X</p>
-                            <img className="cartImg" src={data.productImage} alt={data.productName} />
-                            <p className='mt-0 mt-sm-1 productName col-8'>{data.productName}</p>
+                            <img className="cartImg" src={productImageUrl} alt={data.name} />
+                            <p className='mt-0 mt-sm-1 productName col-8'>{data.name}</p>
                         </div>
                     </div>
                     <div className="col-2">
-                        <p className='productPrice'>N{data.price}</p>
+                        <p className='productPrice'>N{productPrice}</p>
                     </div>
                     <div className="col-2 me-4 me-sm-0">
                         <div className='countHandler ps-5 '>
