@@ -24,12 +24,11 @@ export const ShopContextProvider = (props) => {
     // const proxyURL = 'https://cors-anywhere.herokuapp.com/'
     const getAPIData = async (page) => {
         try {
-            const response = await fetch(`https://timbu-get-all-products.reavdev.workers.dev/?organization_id=c6da4c35e5464beaa11fcae0cd2b61c8&reverse_sort=false&page=${page}&size=${productsPerPage}&Appid=NKN3IHWVBNDGDAI&Apikey=deae56c41b694246bc2a54316c93bc6620240712132338008877`);
+            const response = await fetch(`https://timbu-get-all-products.reavdev.workers.dev/?organization_id=${process.env.REACT_APP_ORGANIZATION_ID}&reverse_sort=false&page=${page}&size=${productsPerPage}&Appid=${process.env.REACT_APP_APP_ID}&Apikey=${process.env.REACT_APP_API_KEY}`);
             const data = await response.json();
 
             if (data.items && data.items.length > 0) {
                 setApiData(data.items);
-                console.log(apiData);
                 setTotalPages(Math.ceil(data.total / productsPerPage));
                 setCartItems(getDefaultCart(data.items));
             } else {
