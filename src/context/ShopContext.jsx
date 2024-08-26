@@ -24,7 +24,7 @@ export const ShopContextProvider = (props) => {
     // const proxyURL = 'https://cors-anywhere.herokuapp.com/'
     const getAPIData = async (page) => {
         try {
-            const response = await fetch(`${process.env.REACT_APP_API_URL}/?organization_id=${process.env.REACT_APP_ORGANIZATION_ID}&reverse_sort=false&page=${page}&size=${productsPerPage}&Appid=${process.env.REACT_APP_APP_ID}&Apikey=${process.env.REACT_APP_API_KEY}`);
+            const response = await fetch(`${process.env.REACT_APP_API_URL}?organization_id=${process.env.REACT_APP_ORGANIZATION_ID}&reverse_sort=false&page=${page}&size=${productsPerPage}&Appid=${process.env.REACT_APP_APP_ID}&Apikey=${process.env.REACT_APP_API_KEY}`);
             const data = await response.json();
             if (data.items && data.items.length > 0) {
                 setApiData(data.items);
